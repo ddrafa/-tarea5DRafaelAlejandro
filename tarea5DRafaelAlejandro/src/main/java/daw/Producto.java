@@ -10,4 +10,13 @@ package daw;
  */
 public record Producto(String nombre, double precio, TAM tamProducto) {
 
+    public Producto(String nombre, double precio, TAM tamProducto) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.tamProducto = tamProducto;
+    }
+
+    public Producto ProductoDefecto() {
+        return new Producto("", 0, TAM.PEQUENO);
+    }
 }
